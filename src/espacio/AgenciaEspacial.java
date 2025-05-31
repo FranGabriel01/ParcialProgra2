@@ -35,7 +35,7 @@ public class AgenciaEspacial {
                 case 4 -> ordenarPorNombre();
 //                case 5 -> ordenarPorAnio();
 //                case 6 -> ordenarPorTripulacion();
-//                case 7 -> System.out.println("Saliendo del sistema...");
+                case 7 -> System.out.println("Saliendo del sistema...");
                 default -> System.out.println("Opción inválida");
             }
 
@@ -117,15 +117,15 @@ public class AgenciaEspacial {
        copia.forEach(Nave::mostrarDatos);   
    }
    
-//    private void ordenarPorAnio() {
-//        List<Nave> copia = new ArrayList<>(listaNaves);
-//        copia.sort((a, b) -> Integer.compare(b.getAnioLanzamiento(), a.getAnioLanzamiento()));
-//        copia.forEach(Nave::mostrarDatos);
-//    }
-//
-//    private void ordenarPorTripulacion() {
-//        List<Nave> copia = new ArrayList<>(listaNaves);
-//        copia.sort((a, b) -> Integer.compare(b.getCapacidadTripulacion(), a.getCapacidadTripulacion()));
-//        copia.forEach(Nave::mostrarDatos);
-//    } 
+   private void ordenarPorAnio() {
+       List<Nave> copia = new ArrayList<>(listaNaves);
+      copia.sort((a, b) -> Integer.compare(b.getAnioLanzamiento(), a.getAnioLanzamiento()));
+       copia.forEach(Nave::mostrarDatos);
+   }
+
+   private void ordenarPorTripulacion() {
+       List<Nave> copia = new ArrayList<>(listaNaves);
+       copia.sort((a, b) -> Integer.compare(b.getCapacidadTripulacion(), a.getCapacidadTripulacion()));
+       copia.forEach(Nave::mostrarDatos);
+    } 
 }
